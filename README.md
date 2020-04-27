@@ -1,2 +1,2 @@
-# i19_DTS2020
+# I19_DTS20
 Tugas Kelompok
