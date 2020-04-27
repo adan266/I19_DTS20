@@ -1,0 +1,227 @@
+*{
+	margin:0;
+	padding: 0;
+}
+
+body{
+	font-family: sans-serif;
+	
+
+}
+a{
+	text-decoration: none;
+}
+
+
+.header{
+	display: flex;
+	background-color:blue;
+	color:white;
+	padding: 20px 0;
+	justify-content: space-around;
+	
+  	
+}
+
+.header .logo{
+	font-size: 45px;
+}
+
+.header ul{
+	display: flex;
+	list-style: none;
+	width: 45%;
+	margin-top:18px;
+}
+.header ul li{
+	margin-right: 40px;
+}
+.header ul li a{
+	display: flex;
+	color: yellow;
+	cursor: pointer;
+}
+
+
+.header ul li a:hover{
+	color: #5ab34f;
+}
+.menu-toggle{
+	display:flex;
+	flex-direction: column;
+	height: 20px;
+	justify-content: space-between;
+	margin-top:18px;
+	position: relative;
+}
+.menu-toggle input{
+	position: absolute;
+	width: 40px;
+	height: 28px;
+	left:-5px;
+	top:-3px;
+	opacity: 0;
+}
+
+.menu-toggle span{
+	display: block;
+	width: 28px;
+	height: 3px;
+	background-color: yellow;
+	border-radius: 3px;
+	transition: all 0.5s;
+}
+
+.menu-toggle span:nth-child(2){
+	transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+	transform-origin: 0 100%;
+}
+
+
+.menu-toggle input:checked ~ span:nth-child(2){
+	background-color: yellow;
+	transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4){
+	background-color: yellow;
+	transform: rotate(-45deg) translate(-1px, 0);
+
+}
+.menu-toggle input:checked ~ span:nth-child(3){
+	transform:scale(0);
+}
+
+.utama{
+	
+	background-color: #5de34a;
+}
+.content{
+	width: 100%;
+	text-align: center;
+	background-image: url(image.jpg);
+	background-size: cover;
+	color:yellow;
+	padding-top:38px;
+}
+
+.content h1{
+	font-size:75px;
+	line-height: 200px;
+}
+.utama h2{
+	font-size:46px;
+	text-align: center;
+	border-bottom: 1px solid #7f7f;
+}
+.utama .extra {
+   	margin:0;
+  	padding-left: 45px;
+  	display:flex;
+}
+.utama .extra .profil {
+  	width:20%;
+  	float:left;
+  	text-align: center;
+ 	box-sizing: border-box;
+  	border: 1px solid #45bb32;
+  	margin:2px;
+  	box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  	overflow:hidden;
+  	cursor: pointer;
+
+}
+
+.utama .extra .profil:hover{
+	background-color: #fff;
+}
+
+.profil img{
+	height: 180px;
+	width: 100%;
+	margin-top:5px; 
+}
+.profil p{
+	font-size:18px;
+	padding:3px;
+}
+
+.footer{
+	height: 50px;
+	background-color: gray;
+	line-height: 50px;
+	text-align:center;
+	font-size: 28px;
+	color:yellow;
+}
+
+@media screen and (max-width: 900px) {
+   
+  	.header ul{
+    	width: 50%;
+  	}
+  	.header .logo{
+  		font-size: 35px;
+	}
+  
+  	.utama.extra.profil{
+    	width: 40%;
+    
+  	}
+}
+
+
+@media screen and (max-width: 670px) {
+
+  	.header ul{
+		margin-top:3px;
+		font-size: 12px;
+		margin-right: 20px;
+		
+	}
+	.header ul li{
+		margin:10px;
+		padding:5px;
+	}
+
+	.header ul li a{
+		color:red;
+	}
+	
+  	.header .logo{
+  		align-items: center;
+  		padding: 5px;
+  	}
+  	.header .logo h4{
+  		font-size: 20px;
+
+  	}
+  	
+	.content h1{
+  		font-size:34px;
+  		padding:0 36px;
+  	}
+  	
+  	.utama .extra {
+	   	padding:0;
+	   	margin:0;
+	   	height: 230px;
+	}
+	
+  	.profil img{
+		height: 120px;
+		width: 100%;
+		margin-top:5px; 
+	}
+
+  	.profil p{
+    	font-size:14px;
+    	line-height:18px;
+  	}
+  	
+  	.footer{
+  		text-align: center;
+  	}
+}
